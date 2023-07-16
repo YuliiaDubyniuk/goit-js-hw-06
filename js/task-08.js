@@ -7,8 +7,9 @@ function onSubmit(evt) {
 
   const { email, password } = evt.currentTarget.elements;
 
-  if (email.value === "" || password.value === "") {
+  if (email.value === "" || password.value.trim() === "") {
     alert("Please fill out all the fields!");
+    return;
   }
   const formData = {
     email: email.value,
