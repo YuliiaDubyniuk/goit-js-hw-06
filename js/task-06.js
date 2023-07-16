@@ -5,7 +5,7 @@ inputEl.addEventListener("blur", doValidation);
 const validInput = Number(inputEl.dataset.length);
 
 function doValidation(evt) {
-  if (evt.currentTarget.value.length === validInput) {
+  if (evt.currentTarget.value.trim().length === validInput) {
     evt.currentTarget.classList.add("valid");
     evt.currentTarget.classList.remove("invalid");
   } else {
