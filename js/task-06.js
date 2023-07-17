@@ -6,10 +6,15 @@ const validInput = Number(inputEl.dataset.length);
 
 function doValidation(evt) {
   if (evt.currentTarget.value.trim().length === validInput) {
-    evt.currentTarget.classList.add("valid");
-    evt.currentTarget.classList.remove("invalid");
+    changeClass("valid", "invalid");
   } else {
-    evt.currentTarget.classList.add("invalid");
-    evt.currentTarget.classList.remove("valid");
+    changeClass("invalid", "valid");
   }
- }
+
+function changeClass(a, b) {
+    evt.currentTarget.classList.add(a);
+    evt.currentTarget.classList.remove(b);
+}
+};
+
+

@@ -21,5 +21,4 @@ const createdGallery = images.map(image =>
 
 galleryEl.insertAdjacentHTML("afterbegin", createdGallery);
 
-console.log(galleryEl);
 

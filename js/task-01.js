@@ -1,8 +1,7 @@
-const ul = document.querySelector("#categories");
-const items = ul.querySelectorAll(".item")
-console.log(`Number of categories: ${items.length}`);
+const ulEl = document.querySelector("#categories");
+console.log(`Number of categories: ${ulEl.children.length}`);
 
-items.forEach(item => {
+[...ulEl.children].forEach(item => {
     const h2 = item.firstElementChild;
     console.log(`Category: ${h2.textContent}`);
    
